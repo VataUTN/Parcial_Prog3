@@ -1,46 +1,46 @@
-# README - Spring Boot REST API
+# README - Spring Boot API REST
 
-## General Description
+## Descripción General
 
-This application is a REST API developed in Spring Boot that provides endpoints for performing CRUD (Create, Read, Update, Delete) operations on entities such as `Author`, `Location`, and `Person`. It also implements the Hibernate Envers audit system to track revisions in the `Revision` entity.
+Esta aplicación es una API REST desarrollada en Spring Boot que proporciona endpoints para realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) en entidades como `Autor`, `Localidad`, y `Persona`. También se ha implementado el sistema de auditoría de Hibernate Envers para realizar un seguimiento de las revisiones en la entidad `Revision`.
 
-## Folder Structure
+## Estructura de Carpetas
 
-- `com.example.springbootapirest.config`: Contains custom configuration, such as `CustomRevisionListener`, used for revision auditing.
-- `com.example.springbootapirest.controllers`: Contains controllers that handle HTTP requests and responses.
-- `com.example.springbootapirest.entities`: Contains entity classes like `Author`, `Location`, `Person`, etc.
-- `com.example.springbootapirest.repositories`: Contains repository interfaces for the entities.
-- `com.example.springbootapirest.services`: Contains service interfaces and implementations that handle business logic.
-- `resources`: Contains the database configuration file (`application.properties`) and H2 console configuration (`h2-console`).
+- `com.example.springbootapirest.config`: Contiene la configuración personalizada, como `CustomRevisionListener`, que se utiliza para la auditoría de revisiones.
+- `com.example.springbootapirest.controllers`: Contiene los controladores que manejan las solicitudes HTTP y las respuestas.
+- `com.example.springbootapirest.entities`: Contiene las clases de entidades como `Autor`, `Localidad`, `Persona`, etc.
+- `com.example.springbootapirest.repositories`: Contiene las interfaces de repositorio para las entidades.
+- `com.example.springbootapirest.services`: Contiene las interfaces y las implementaciones de los servicios que gestionan la lógica de negocio.
+- `resources`: Contiene el archivo de configuración de la base de datos (`application.properties`) y la configuración para la consola H2 (`h2-console`).
 
-## Controllers
+## Controladores
 
-- `AuthorController`, `LocationController`, `PersonController`: Controllers that handle CRUD operations for the `Author`, `Location`, and `Person` entities.
+- `AutorController`, `LocalidadController`, `PersonaController`: Controladores que manejan las operaciones CRUD para las entidades `Autor`, `Localidad`, y `Persona`.
 
-## Services
+## Servicios
 
-- `AuthorServiceImpl`, `LocationServiceImpl`, `PersonServiceImpl`: Service implementations that perform operations on the corresponding entities.
+- `AutorServiceImpl`, `LocalidadServiceImpl`, `PersonaServiceImpl`: Implementaciones de servicios que realizan operaciones en las entidades correspondientes.
 
-## Audit
+## Auditoría
 
-- `Revision`: Entity class that stores revision information such as date and time.
-- `CustomRevisionListener`: Configuration class that listens to entity revisions and performs custom actions if necessary.
+- `Revision`: Clase de entidad que almacena información de revisiones, como fecha y hora.
+- `CustomRevisionListener`: Clase de configuración que escucha las revisiones de las entidades y realiza acciones personalizadas, si es necesario.
 
-## Database
+## Base de Datos
 
-The application uses an in-memory H2 database with the H2 console enabled for easy debugging and development. You can access the H2 console at [http://localhost:8080/h2-console/](http://localhost:8080/h2-console/). Database configuration is located in `application.properties`.
+La aplicación utiliza una base de datos H2 en memoria con la consola H2 habilitada para facilitar la depuración y el desarrollo. Puedes acceder a la consola H2 a través de [http://localhost:8080/h2-console/](http://localhost:8080/h2-console/). La configuración de la base de datos se encuentra en `application.properties`.
 
-## API Documentation
+## Documentación API
 
-The API is documented using Springdoc OpenAPI. You can access the API documentation at [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) once the application is running.
+La API está documentada utilizando Springdoc OpenAPI. Puedes acceder a la documentación de la API en [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) una vez que la aplicación esté en funcionamiento.
 
-## Running the Application
+## Ejecución de la Aplicación
 
-To run the application, you can use the `main` method in the `SpringbootApiRestApplication` class. Make sure the database is correctly configured in `application.properties` before running the application.
+Para ejecutar la aplicación, puedes utilizar el método `main` en la clase `SpringbootApiRestApplication`. Asegúrate de que la base de datos esté configurada correctamente en `application.properties` antes de ejecutar la aplicación.
 
-## Additional Notes
+## Notas Adicionales
 
-- The application uses Lombok annotations to automatically generate getter, setter, and other access methods in entity classes.
-- Hibernate Envers is used to audit entity revisions, allowing tracking of data changes over time.
+- La aplicación utiliza anotaciones de Lombok para generar automáticamente los métodos getters, setters y otros métodos de acceso en las clases de entidad.
+- Hibernate Envers se utiliza para auditar las revisiones de las entidades, lo que permite realizar un seguimiento de los cambios en los datos a lo largo del tiempo.
 
-This is a high-level overview of the Spring Boot REST API application. You can explore individual classes and packages for more details on the implementation and specific functionality of each component.
+Esta es una descripción general de alto nivel de la aplicación Spring Boot API REST. Puedes explorar las clases y los paquetes individuales para obtener más detalles sobre la implementación y la funcionalidad específica de cada componente.
