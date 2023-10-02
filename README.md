@@ -1,7 +1,5 @@
 # README - Spring Boot API REST
 
-Este README proporciona una descripción general del código de la aplicación Spring Boot API REST que has compartido.
-
 ## Descripción General
 
 Esta aplicación es una API REST desarrollada en Spring Boot que proporciona endpoints para realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) en entidades como `Autor`, `Localidad`, y `Persona`. También se ha implementado el sistema de auditoría de Hibernate Envers para realizar un seguimiento de las revisiones en la entidad `Revision`.
